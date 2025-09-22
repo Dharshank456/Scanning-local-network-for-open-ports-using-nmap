@@ -1,0 +1,12 @@
+Port 53 is used for DNS services, but leaving it open can expose a network to several security risks.
+
+Security Risks of Open Port 53
+DNS Tunneling: Attackers may hide data in DNS requests, using port 53 to exfiltrate sensitive information. This often bypasses basic firewall rules since DNS traffic is typically allowed.
+DDoS and Reflection Attacks: Open DNS servers can be abused in Distributed Denial of Service attacks, reflecting amplified traffic to target victims.
+DNS Cache Poisoning/Spoofing: Attackers can insert false DNS records, redirecting users to malicious sites.
+Botnet Control: Some malware uses DNS queries through port 53 for command and control communication with infected devices.
+
+Best Practices
+Restrict access to DNS port 53—allow only necessary and trusted networks or systems to query your DNS server.
+Implement firewalls, intrusion detection systems, and monitor for anomalous patterns in DNS traffic.
+Use security extensions like DNSSEC, enable DNS over HTTPS (DoH), and keep DNS software updated
